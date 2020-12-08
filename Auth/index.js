@@ -4,8 +4,10 @@ const mongoose = require('mongoose');
 
 
 // Connect to DB
-mongoose.connect('mongodb+srv://tanay:zeus@cluster0.vqg2i.mongodb.net/<dbname>?retryWrites=true&',
-() => console.log('Database connected!')
+mongoose.connect(
+    'mongodb+srv://tanay:zeus@cluster0.vqg2i.mongodb.net/<dbname>?retryWrites=true&',
+    { useUnifiedTopology: true },
+    () => console.log('Database connected!')
 );
 
 // Import routes
